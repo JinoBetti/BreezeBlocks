@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ModifyDCLFDialog</class>
+ <widget class="QDialog" name="ModifyDCLFDialog">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>581</width>
+    <height>540</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Modification de la DCLF</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="labelClasse">
+     <property name="text">
+      <string>Classe</string>
+     </property>
+     <property name="buddy">
+      <cstring>lineEditClasse</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QLineEdit" name="lineEditClasse">
+     <property name="placeholderText">
+      <string>Classe de fichier (fichier de travail, fichier interchaine...)</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="labelName">
+     <property name="text">
+      <string>Nom</string>
+     </property>
+     <property name="buddy">
+      <cstring>lineEditName</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLineEdit" name="lineEditName">
+     <property name="placeholderText">
+      <string>Nom de la DCLF ou du fichier</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Précisions</string>
+     </property>
+     <property name="buddy">
+      <cstring>textEditPrecisions</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QTextEdit" name="textEditPrecisions">
+     <property name="tabChangesFocus">
+      <bool>true</bool>
+     </property>
+     <property name="placeholderText">
+      <string>Informations supplémentaires concernant le fichier (affichées uniquement si non vide)</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="labelID">
+     <property name="text">
+      <string>ID de la DCLF</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QLabel" name="ID">
+     <property name="text">
+      <string>IDDELADCLF</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="labelSize">
+     <property name="text">
+      <string>Longueur fichier</string>
+     </property>
+     <property name="buddy">
+      <cstring>spinBoxSize</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QSpinBox" name="spinBoxSize">
+     <property name="minimum">
+      <number>0</number>
+     </property>
+     <property name="maximum">
+      <number>40000</number>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="labelType">
+     <property name="text">
+      <string>Type (F/V)</string>
+     </property>
+     <property name="buddy">
+      <cstring>lineEditType</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1">
+    <widget class="QLineEdit" name="lineEditType">
+     <property name="placeholderText">
+      <string>Type de fichier : Fixe ou Variable</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0">
+    <widget class="QLabel" name="labelWidth">
+     <property name="text">
+      <string>Largeur</string>
+     </property>
+     <property name="buddy">
+      <cstring>spinBoxWidth</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="1">
+    <widget class="QSpinBox" name="spinBoxWidth">
+     <property name="minimum">
+      <number>10</number>
+     </property>
+     <property name="maximum">
+      <number>999</number>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="0">
+    <widget class="QLabel" name="labelHeight">
+     <property name="text">
+      <string>Hauteur</string>
+     </property>
+     <property name="buddy">
+      <cstring>spinBoxHeight</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="1">
+    <widget class="QSpinBox" name="spinBoxHeight">
+     <property name="minimum">
+      <number>10</number>
+     </property>
+     <property name="maximum">
+      <number>999</number>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="0">
+    <widget class="QLabel" name="labelComment">
+     <property name="text">
+      <string>Commentaire</string>
+     </property>
+     <property name="buddy">
+      <cstring>textEditComment</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="1">
+    <widget class="QTextEdit" name="textEditComment">
+     <property name="baseSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="tabChangesFocus">
+      <bool>true</bool>
+     </property>
+     <property name="placeholderText">
+      <string>Commentaire (affiché sous forme d'une infobulle au survol du composant)</string>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="0">
+    <widget class="QLabel" name="labelColor">
+     <property name="text">
+      <string>Couleur</string>
+     </property>
+     <property name="buddy">
+      <cstring>pushButtonColor</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="1">
+    <layout class="QHBoxLayout" name="horizontalLayout" stretch="4,1">
+     <item>
+      <widget class="QPushButton" name="pushButtonColor">
+       <property name="text">
+        <string>Changer la couleur</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButtonInitColor">
+       <property name="text">
+        <string>Réinitialiser</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="11" column="0">
+    <widget class="QLabel" name="labelDetail">
+     <property name="text">
+      <string>Lien vers détail</string>
+     </property>
+     <property name="buddy">
+      <cstring>pushButtonDetail</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="1">
+    <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="4,1">
+     <item>
+      <widget class="QPushButton" name="pushButtonDetail">
+       <property name="text">
+        <string>Parcourir...</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButtonInitDetail">
+       <property name="text">
+        <string>Réinitialiser</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="12" column="1">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Ok</set>
+     </property>
+     <property name="centerButtons">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Ajustement auto.</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QCheckBox" name="checkBoxAutoAdjust">
+     <property name="text">
+      <string>Ajustement automatique de la taille du noeud</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>ModifyDCLFDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>ModifyDCLFDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

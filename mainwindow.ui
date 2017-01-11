@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>888</width>
+    <height>771</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Automatisation des dessins de chaine de PCL</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>Icons/cat.jpg</normaloff>Icons/cat.jpg</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>1</horstretch>
+     <verstretch>1</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>888</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFichier">
+    <property name="title">
+     <string>Fichier</string>
+    </property>
+    <widget class="QMenu" name="menuFichiers_ouverts_r_cemment">
+     <property name="title">
+      <string>Fichiers ouverts récemment</string>
+     </property>
+    </widget>
+    <addaction name="actionNouveau"/>
+    <addaction name="actionOuvrir_fichier_PCL_ou_XML"/>
+    <addaction name="separator"/>
+    <addaction name="actionSauvegarder_XML"/>
+    <addaction name="actionSauvegarder_XML_sous"/>
+    <addaction name="actionSauvegarder_tous_les_DDC_ouverts"/>
+    <addaction name="actionSauvegarder_Image"/>
+    <addaction name="actionCopier_l_image_dans_le_presse_papier"/>
+    <addaction name="actionExport_en_CSV"/>
+    <addaction name="actionExporter_au_format_PDF"/>
+    <addaction name="actionImprimer"/>
+    <addaction name="actionImprimer_la_s_lection"/>
+    <addaction name="separator"/>
+    <addaction name="menuFichiers_ouverts_r_cemment"/>
+    <addaction name="actionMont_e_de_version"/>
+    <addaction name="separator"/>
+    <addaction name="actionRestaurer_le_dernier_fichier_modifi"/>
+    <addaction name="actionQuitter"/>
+   </widget>
+   <widget class="QMenu" name="menuEdition">
+    <property name="title">
+     <string>Edition</string>
+    </property>
+    <addaction name="actionAnnuler"/>
+    <addaction name="actionR_tablir"/>
+    <addaction name="actionAligner"/>
+    <addaction name="actionCopier_dans_le_presse_papier"/>
+    <addaction name="actionCouper_dans_le_presse_papier"/>
+    <addaction name="actionDupliquer_la_s_lection"/>
+    <addaction name="actionColler_le_contenu_du_presse_papier"/>
+    <addaction name="actionRechercher"/>
+    <addaction name="separator"/>
+    <addaction name="actionAjouter_un_Step"/>
+    <addaction name="actionAjouter_un_fichier"/>
+    <addaction name="actionAjouter_une_fonction_pacbase"/>
+    <addaction name="actionAjouter_un_noeud_condition"/>
+    <addaction name="actionAjouter_un_noeud_personnalis"/>
+    <addaction name="separator"/>
+    <addaction name="actionPr_f_rences"/>
+    <addaction name="actionTrier"/>
+    <addaction name="actionTrier_la_s_l_ction"/>
+    <addaction name="actionMise_jour_des_liens"/>
+   </widget>
+   <widget class="QMenu" name="menuAffichage">
+    <property name="title">
+     <string>Affichage</string>
+    </property>
+    <widget class="QMenu" name="menuType_de_liens">
+     <property name="title">
+      <string>Type de liens</string>
+     </property>
+     <addaction name="actionDirects"/>
+     <addaction name="actionCourbes"/>
+     <addaction name="actionLignes_droites"/>
+    </widget>
+    <addaction name="actionZoomOut"/>
+    <addaction name="actionZoomIn"/>
+    <addaction name="actionZoom_100"/>
+    <addaction name="actionZoom_fen_tre"/>
+    <addaction name="actionAfficher_la_grille"/>
+    <addaction name="separator"/>
+    <addaction name="actionAfficher_les_ancres"/>
+    <addaction name="actionAfficher_les_DDName_sur_les_liens"/>
+    <addaction name="actionCacher_les_SYSIN"/>
+    <addaction name="actionCacher_les_conditions"/>
+    <addaction name="separator"/>
+    <addaction name="menuType_de_liens"/>
+    <addaction name="separator"/>
+    <addaction name="actionCacher_les_liens_entre_noeuds"/>
+    <addaction name="actionCacher_la_classe_des_DCLF"/>
+    <addaction name="actionCacher_le_nom_des_steps"/>
+    <addaction name="separator"/>
+    <addaction name="actionCacher_le_titre"/>
+    <addaction name="actionMettre_le_titre_en_haut"/>
+   </widget>
+   <widget class="QMenu" name="menuS_lection">
+    <property name="title">
+     <string>Sélection</string>
+    </property>
+    <addaction name="actionMode_s_lection"/>
+    <addaction name="actionActiver_la_s_lection_par_branche"/>
+    <addaction name="separator"/>
+    <addaction name="actionModifier_la_couleur_des_noeuds_s_lectionn_s"/>
+    <addaction name="actionR_initialiser_la_couleur_des_noeuds_s_lectionn_s"/>
+    <addaction name="actionTrier_la_s_lection"/>
+    <addaction name="actionSupprimer_la_s_lection"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>?</string>
+    </property>
+    <addaction name="actionOuvrir_la_documentation"/>
+   </widget>
+   <addaction name="menuFichier"/>
+   <addaction name="menuEdition"/>
+   <addaction name="menuAffichage"/>
+   <addaction name="menuS_lection"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionNouveau">
+   <property name="text">
+    <string>Nouveau</string>
+   </property>
+  </action>
+  <action name="actionOuvrir_fichier_PCL_ou_XML">
+   <property name="text">
+    <string>Ouvrir</string>
+   </property>
+  </action>
+  <action name="actionSauvegarder_XML">
+   <property name="text">
+    <string>Sauvegarder DDC</string>
+   </property>
+  </action>
+  <action name="actionSauvegarder_XML_sous">
+   <property name="text">
+    <string>Sauvegarder DDC sous...</string>
+   </property>
+  </action>
+  <action name="actionSauvegarder_Image">
+   <property name="text">
+    <string>Sauvegarder Image </string>
+   </property>
+  </action>
+  <action name="actionRestaurer_le_dernier_fichier_modifi">
+   <property name="text">
+    <string>Restaurer le dernier fichier modifié</string>
+   </property>
+  </action>
+  <action name="actionQuitter">
+   <property name="text">
+    <string>Quitter</string>
+   </property>
+  </action>
+  <action name="actionMode_s_lection">
+   <property name="text">
+    <string>Mode sélection</string>
+   </property>
+  </action>
+  <action name="actionActiver_la_s_lection_par_branche">
+   <property name="text">
+    <string>Activer la sélection par branche</string>
+   </property>
+  </action>
+  <action name="actionEtendre_les_branches_aux_noeuds_isol_s">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Etendre les branches aux noeuds isolés</string>
+   </property>
+  </action>
+  <action name="actionSupprimer_la_s_lection">
+   <property name="text">
+    <string>Supprimer la sélection</string>
+   </property>
+  </action>
+  <action name="actionZoom_100">
+   <property name="text">
+    <string>Zoom 100%</string>
+   </property>
+  </action>
+  <action name="actionZoom_fen_tre">
+   <property name="text">
+    <string>Zoom fenêtre</string>
+   </property>
+  </action>
+  <action name="actionAfficher_les_ancres">
+   <property name="text">
+    <string>Afficher les ancres des liens</string>
+   </property>
+  </action>
+  <action name="actionAfficher_les_DDName_sur_les_liens">
+   <property name="text">
+    <string>Afficher les DDName sur les liens</string>
+   </property>
+  </action>
+  <action name="actionCacher_la_classe_des_DCLF">
+   <property name="text">
+    <string>Cacher la classe des fichiers</string>
+   </property>
+  </action>
+  <action name="actionCacher_le_nom_des_steps">
+   <property name="text">
+    <string>Cacher le nom des étapes</string>
+   </property>
+  </action>
+  <action name="actionCacher_les_SYSIN">
+   <property name="text">
+    <string>Cacher les cartes Data</string>
+   </property>
+  </action>
+  <action name="actionCacher_les_conditions">
+   <property name="text">
+    <string>Cacher les conditions</string>
+   </property>
+  </action>
+  <action name="actionCacher_le_titre">
+   <property name="text">
+    <string>Cacher le titre</string>
+   </property>
+  </action>
+  <action name="actionMettre_le_titre_en_haut">
+   <property name="text">
+    <string>Mettre le titre en haut</string>
+   </property>
+  </action>
+  <action name="actionAnnuler">
+   <property name="text">
+    <string>Annuler</string>
+   </property>
+  </action>
+  <action name="actionMettre_jour">
+   <property name="text">
+    <string>Mettre à jour</string>
+   </property>
+  </action>
+  <action name="actionAligner">
+   <property name="text">
+    <string>Aligner</string>
+   </property>
+  </action>
+  <action name="actionAjouter_un_Step">
+   <property name="text">
+    <string>Ajouter une étape</string>
+   </property>
+  </action>
+  <action name="actionAjouter_un_fichier">
+   <property name="text">
+    <string>Ajouter un fichier</string>
+   </property>
+  </action>
+  <action name="actionAjouter_un_noeud_personnalis">
+   <property name="text">
+    <string>Ajouter un noeud personnalisé</string>
+   </property>
+  </action>
+  <action name="actionDirects">
+   <property name="text">
+    <string>Directs</string>
+   </property>
+  </action>
+  <action name="actionCourbes">
+   <property name="text">
+    <string>Courbes</string>
+   </property>
+  </action>
+  <action name="actionLignes_droites">
+   <property name="text">
+    <string>Lignes droites</string>
+   </property>
+  </action>
+  <action name="actionCacher_les_liens_entre_noeuds">
+   <property name="text">
+    <string>Cacher les liens entre fichiers</string>
+   </property>
+  </action>
+  <action name="actionPr_f_rences">
+   <property name="text">
+    <string>Préférences</string>
+   </property>
+  </action>
+  <action name="actionZoomIn">
+   <property name="text">
+    <string>Zoom +</string>
+   </property>
+  </action>
+  <action name="actionZoomOut">
+   <property name="text">
+    <string>Zoom -</string>
+   </property>
+  </action>
+  <action name="actionExport_en_CSV">
+   <property name="text">
+    <string>Exporter au format CSV</string>
+   </property>
+  </action>
+  <action name="actionSauvegarder_tous_les_DDC_ouverts">
+   <property name="text">
+    <string>Sauvegarder tous les DDC ouverts</string>
+   </property>
+  </action>
+  <action name="actionAjouter_une_fonction_pacbase">
+   <property name="text">
+    <string>Ajouter une fonction</string>
+   </property>
+  </action>
+  <action name="actionCopier_dans_le_presse_papier">
+   <property name="text">
+    <string>Copier la séléction</string>
+   </property>
+  </action>
+  <action name="actionColler_le_contenu_du_presse_papier">
+   <property name="text">
+    <string>Coller le contenu du presse-papier</string>
+   </property>
+  </action>
+  <action name="actionMont_e_de_version">
+   <property name="text">
+    <string>Montée de version (PCL)</string>
+   </property>
+  </action>
+  <action name="actionTrier">
+   <property name="text">
+    <string>Trier tous les noeuds</string>
+   </property>
+  </action>
+  <action name="actionAjouter_un_noeud_condition">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Ajouter un noeud condition</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionCouper_dans_le_presse_papier">
+   <property name="text">
+    <string>Couper la séléction</string>
+   </property>
+  </action>
+  <action name="actionDupliquer_la_s_lection">
+   <property name="text">
+    <string>Dupliquer la sélection</string>
+   </property>
+  </action>
+  <action name="actionCopier_l_image_dans_le_presse_papier">
+   <property name="text">
+    <string>Copier dans le presse papier</string>
+   </property>
+  </action>
+  <action name="actionFichiers_r_cents">
+   <property name="text">
+    <string>Fichiers récents</string>
+   </property>
+  </action>
+  <action name="actionRechercher">
+   <property name="text">
+    <string>Rechercher...</string>
+   </property>
+  </action>
+  <action name="actionTrier_la_s_l_ction">
+   <property name="text">
+    <string>Trier la séléction</string>
+   </property>
+  </action>
+  <action name="actionImprimer">
+   <property name="text">
+    <string>Imprimer</string>
+   </property>
+  </action>
+  <action name="actionImprimer_la_s_lection">
+   <property name="text">
+    <string>Imprimer la sélection</string>
+   </property>
+  </action>
+  <action name="actionTrier_la_s_lection">
+   <property name="text">
+    <string>Trier la sélection</string>
+   </property>
+  </action>
+  <action name="actionModifier_la_couleur_des_noeuds_s_lectionn_s">
+   <property name="text">
+    <string>Modifier la couleur des noeuds sélectionnés</string>
+   </property>
+  </action>
+  <action name="actionExporter_au_format_PDF">
+   <property name="text">
+    <string>Exporter au format PDF</string>
+   </property>
+  </action>
+  <action name="actionAfficher_la_grille">
+   <property name="text">
+    <string>Afficher la grille</string>
+   </property>
+  </action>
+  <action name="actionR_initialiser_la_couleur_des_noeuds_s_lectionn_s">
+   <property name="text">
+    <string>Réinitialiser la couleur des noeuds sélectionnés</string>
+   </property>
+  </action>
+  <action name="actionR_tablir">
+   <property name="text">
+    <string>Rétablir</string>
+   </property>
+  </action>
+  <action name="actionOuvrir_la_documentation">
+   <property name="text">
+    <string>Ouvrir la documentation</string>
+   </property>
+  </action>
+  <action name="actionE">
+   <property name="text">
+    <string>e</string>
+   </property>
+  </action>
+  <action name="actionPacBaseas">
+   <property name="text">
+    <string>PacBase</string>
+   </property>
+  </action>
+  <action name="actionMise_jour_des_liens">
+   <property name="text">
+    <string>Mise à jour des liens</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

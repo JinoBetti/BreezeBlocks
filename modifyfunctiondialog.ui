@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ModifyFunctionDialog</class>
+ <widget class="QDialog" name="ModifyFunctionDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1109</width>
+    <height>430</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Modifier la fonction</string>
+  </property>
+  <layout class="QFormLayout" name="formLayout">
+   <item row="15" column="1">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0">
+    <widget class="QLabel" name="label_5">
+     <property name="text">
+      <string>Identifiant</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Nom</string>
+     </property>
+     <property name="buddy">
+      <cstring>lineEditName</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Méthode d'appel</string>
+     </property>
+     <property name="buddy">
+      <cstring>lineEditCallMethod</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Niveau</string>
+     </property>
+     <property name="buddy">
+      <cstring>lineEditLevel</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="0">
+    <widget class="QLabel" name="label_4">
+     <property name="text">
+      <string>Commentaire</string>
+     </property>
+     <property name="buddy">
+      <cstring>textEditComment</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLineEdit" name="lineEditLevel">
+     <property name="placeholderText">
+      <string>Niveau associé à la fonction sur 2c. et type de fonction sur 2c.</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QLineEdit" name="lineEditCallMethod">
+     <property name="placeholderText">
+      <string>Méthode d'appel (si pertinent) : CALL, PERFORM, ...</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QLineEdit" name="lineEditName">
+     <property name="placeholderText">
+      <string>Nom de la fonction</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="1">
+    <widget class="QLabel" name="labelId">
+     <property name="text">
+      <string>IDDELAFONCTION</string>
+     </property>
+    </widget>
+   </item>
+   <item row="12" column="0">
+    <widget class="QLabel" name="label_6">
+     <property name="text">
+      <string>Couleur</string>
+     </property>
+     <property name="buddy">
+      <cstring>pushButtonColor</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="14" column="0">
+    <widget class="QLabel" name="label_7">
+     <property name="text">
+      <string>Lien vers détail</string>
+     </property>
+     <property name="buddy">
+      <cstring>pushButtonLink</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="12" column="1">
+    <layout class="QHBoxLayout" name="horizontalLayout" stretch="3,1">
+     <item>
+      <widget class="QPushButton" name="pushButtonColor">
+       <property name="text">
+        <string>Choisir la couleur</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButtonInitColor">
+       <property name="text">
+        <string>Réinitialiser</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="14" column="1">
+    <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="3,1">
+     <item>
+      <widget class="QPushButton" name="pushButtonLink">
+       <property name="text">
+        <string>Parcourir...</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButtonInitLink">
+       <property name="text">
+        <string>Réinitialiser</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="11" column="1">
+    <widget class="QTextEdit" name="textEditComment">
+     <property name="font">
+      <font>
+       <family>Courier New</family>
+      </font>
+     </property>
+     <property name="tabChangesFocus">
+      <bool>true</bool>
+     </property>
+     <property name="placeholderText">
+      <string>Commentaires disponibles sous forme d'infobulle (Code de la fonction si disponible)</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="1">
+    <widget class="QSpinBox" name="spinBoxWidth">
+     <property name="minimum">
+      <number>5</number>
+     </property>
+     <property name="maximum">
+      <number>1000</number>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="1">
+    <widget class="QSpinBox" name="spinBoxHeight">
+     <property name="minimum">
+      <number>5</number>
+     </property>
+     <property name="maximum">
+      <number>1000</number>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="0">
+    <widget class="QLabel" name="label_8">
+     <property name="text">
+      <string>Largeur</string>
+     </property>
+     <property name="buddy">
+      <cstring>spinBoxWidth</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="0">
+    <widget class="QLabel" name="label_9">
+     <property name="text">
+      <string>Hauteur</string>
+     </property>
+     <property name="buddy">
+      <cstring>spinBoxHeight</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="label_10">
+     <property name="text">
+      <string>Précisions</string>
+     </property>
+     <property name="buddy">
+      <cstring>textEditPrecisions</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QTextEdit" name="textEditPrecisions">
+     <property name="tabChangesFocus">
+      <bool>true</bool>
+     </property>
+     <property name="placeholderText">
+      <string>Informations supplémentaires sur la fonction (affichée dans le composant si non vide)</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1">
+    <widget class="QCheckBox" name="checkBoxAutoAdjust">
+     <property name="text">
+      <string>Ajustement automatique de la taille du noeud</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="label_11">
+     <property name="text">
+      <string>Ajustement auto.</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>ModifyFunctionDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>ModifyFunctionDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

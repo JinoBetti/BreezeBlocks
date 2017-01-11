@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ModifyCustomNodeDialog</class>
+ <widget class="QDialog" name="ModifyCustomNodeDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>791</width>
+    <height>676</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Modifier le noeud</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout" rowstretch="1,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0">
+   <item row="13" column="0">
+    <widget class="QCheckBox" name="checkBoxShadow">
+     <property name="text">
+      <string>Ombré</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QTextEdit" name="textEditText">
+     <property name="tabChangesFocus">
+      <bool>true</bool>
+     </property>
+     <property name="placeholderText">
+      <string>Texte du noeud</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1">
+    <widget class="QTextEdit" name="textEditComment">
+     <property name="font">
+      <font>
+       <family>Courier New</family>
+      </font>
+     </property>
+     <property name="tabChangesFocus">
+      <bool>true</bool>
+     </property>
+     <property name="placeholderText">
+      <string>Commentaire en infobulle</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QCheckBox" name="checkBoxAutoAdjust">
+     <property name="text">
+      <string>Ajustement automatique de la taille du noeud</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="labelText">
+     <property name="text">
+      <string>Texte</string>
+     </property>
+     <property name="buddy">
+      <cstring>textEditText</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Alignement Hz.</string>
+     </property>
+     <property name="buddy">
+      <cstring>comboBoxHzAlign</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="13" column="1">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QCheckBox" name="checkBoxMovable">
+       <property name="text">
+        <string>Ancré</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="checkBoxBackground">
+       <property name="text">
+        <string>Fond transparent</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="checkBoxContour">
+       <property name="text">
+        <string>Contour transparent</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="checkBoxInTheBack">
+       <property name="text">
+        <string>Arrière plan</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="14" column="0">
+    <widget class="QLabel" name="labelLink">
+     <property name="text">
+      <string>Lien vers le détail</string>
+     </property>
+     <property name="buddy">
+      <cstring>pushButtonLink</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="14" column="1">
+    <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="4,1">
+     <item>
+      <widget class="QPushButton" name="pushButtonLink">
+       <property name="text">
+        <string>Parcourir...</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButtonInitDetail">
+       <property name="text">
+        <string>Réinitialiser</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="15" column="1">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+   <item row="12" column="0">
+    <widget class="QLabel" name="labelColor">
+     <property name="text">
+      <string>Couleur</string>
+     </property>
+     <property name="buddy">
+      <cstring>pushButtonColor</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="1">
+    <widget class="QComboBox" name="comboBoxShape">
+     <item>
+      <property name="text">
+       <string>Rectangle</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Ellipse</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Rectangle arrondi</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Cylindre</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Losange</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="9" column="0">
+    <widget class="QLabel" name="labelHeight">
+     <property name="text">
+      <string>Hauteur</string>
+     </property>
+     <property name="buddy">
+      <cstring>spinBoxHeight</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="12" column="1">
+    <widget class="QPushButton" name="pushButtonColor">
+     <property name="text">
+      <string>Choisir la couleur du fond</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QComboBox" name="comboBoxVtAlign">
+     <item>
+      <property name="text">
+       <string>Haut</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Centré</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Bas</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QComboBox" name="comboBoxHzAlign">
+     <item>
+      <property name="text">
+       <string>Gauche</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Centré</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Droite</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Police</string>
+     </property>
+     <property name="buddy">
+      <cstring>fontComboBox</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Alignement Vt.</string>
+     </property>
+     <property name="buddy">
+      <cstring>comboBoxVtAlign</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="1">
+    <widget class="QSpinBox" name="spinBoxWidth">
+     <property name="minimum">
+      <number>5</number>
+     </property>
+     <property name="maximum">
+      <number>9999</number>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0">
+    <widget class="QLabel" name="labelWidth">
+     <property name="text">
+      <string>Largeur</string>
+     </property>
+     <property name="buddy">
+      <cstring>spinBoxWidth</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="labelComment">
+     <property name="text">
+      <string>Infobulle</string>
+     </property>
+     <property name="buddy">
+      <cstring>textEditComment</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QFontComboBox" name="fontComboBox"/>
+   </item>
+   <item row="11" column="0">
+    <widget class="QLabel" name="labelShape">
+     <property name="text">
+      <string>Forme</string>
+     </property>
+     <property name="buddy">
+      <cstring>comboBoxShape</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="1">
+    <widget class="QSpinBox" name="spinBoxHeight">
+     <property name="minimum">
+      <number>5</number>
+     </property>
+     <property name="maximum">
+      <number>9999</number>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QSpinBox" name="spinBoxSize">
+     <property name="whatsThis">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Taille de la police, comprise entre 1 et 250&lt;/p&gt;&lt;p&gt;La valeur 0 réinitialise à la taille par défaut&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="minimum">
+      <number>0</number>
+     </property>
+     <property name="maximum">
+      <number>250</number>
+     </property>
+     <property name="value">
+      <number>0</number>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="label_4">
+     <property name="text">
+      <string>Taille de police</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>ModifyCustomNodeDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>ModifyCustomNodeDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
